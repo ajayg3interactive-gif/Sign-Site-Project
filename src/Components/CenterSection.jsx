@@ -21,6 +21,7 @@ import {
   OptionIcon,
   PenIcon,
   SearchIcon,
+  SmallDownArrow,
   UpArrow,
 } from "../assets/Icons/Menuicons";
 import SearchBar from "./SearchBar";
@@ -28,6 +29,7 @@ import SearchBar from "./SearchBar";
 export default function CenterSection() {
   const [isExpand, setIsExpand] = useState(true);
   const [selectedTab, setSelectedTab] = useState(0);
+  const [headTab, setHeadTab] = useState(0);
   const buttonStyle = {
     textTransform: "none",
     bgcolor: "#0071CE1A",
@@ -63,9 +65,14 @@ export default function CenterSection() {
     },
   };
   const TABS = ["Purchase", "History", "Notes", "Tasks", "Assets", "Related"];
+  const HeadTab = ["Items", "Jobs"];
 
-  const handleTabChange = useCallback((__dirname, idx) => {
+  const handleTabChange = useCallback((_, idx) => {
     setSelectedTab(idx);
+  });
+
+  const handleHeadTabChange = useCallback((_, idx) => {
+    setHeadTab(idx);
   });
 
   const tabContents = [
@@ -84,6 +91,99 @@ export default function CenterSection() {
         Purchased Items
       </Typography>
       <p style={{ color: "#111827B2" }}>No Purchased Items.</p>
+    </Box>,
+  ];
+
+  const headTabContents = [
+    <Box
+      key={"items"}
+      sx={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}
+    >
+      <Box
+        sx={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 0.5fr",
+          p: "1rem",
+          bgcolor: "#F5F6FA",
+          borderRadius: "1rem",
+        }}
+      >
+        <Box>Item name</Box>
+        <Box>Quantity</Box>
+        <Box>Unit Discount</Box>
+        <Box>Unit Price</Box>
+        <Box>Total Price</Box>
+        {/* <Box></Box> */}
+      </Box>
+      <Box
+        sx={{
+          p: "1rem",
+          borderRadius: "1rem",
+          border: "1px solid #D9D9D9 ",
+          // alignContent:'center'
+        }}
+      >
+        <Box
+          sx={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 0.5fr",
+          }}
+        >
+          <Box>Lorem ip - Apparel</Box>
+          <Box>18 Each</Box>
+          <Box>10 %</Box>
+          <Box>$2500.00</Box>
+          <Box>$2500.00</Box>
+          <Box sx={{ display: "flex", gap: "1rem" }}>
+            <Button sx={{ ...buttonStyle }}>
+              <DownArrow />
+            </Button>
+            <Button sx={{ ...buttonStyle, bgcolor: "#0071CE" }}>
+              <MenuIcon color={"#fff"} />
+            </Button>
+          </Box>
+        </Box>
+        <Box sx={{ display: "flex", gap: "1rem" }}>
+          <Button
+            sx={{
+              ...buttonStyle,
+              display: "flex",
+              gap: "1rem",
+              alignItems: "center",
+            }}
+          >
+            Description
+            <SmallDownArrow />
+          </Button>
+          <Button
+            sx={{
+              ...buttonStyle,
+              display: "flex",
+              gap: "1rem",
+              alignItems: "center",
+            }}
+          >
+            Price Breakdown
+            <SmallDownArrow />
+          </Button>
+        </Box>
+      </Box>
+      <Box sx={{ display: "flex", justifyContent: "end" }}>
+        <Box sx={{ display: "grid", gridTemplateColumns:"1fr 1fr" }}>
+          <Box sx={{ }}>
+            <Typography>Sub Total:</Typography>
+            <Typography>(0%):</Typography>
+            <Typography>State (8.5%):</Typography>
+            <Typography>Total Tax:</Typography>
+          </Box>
+          <Box sx={{ textAlign: "right" }}>
+             <Typography>Sub Total:</Typography>
+            <Typography>(0%):</Typography>
+            <Typography>State (8.5%):</Typography>
+            <Typography>Total Tax:</Typography>
+          </Box>
+        </Box>
+      </Box>
     </Box>,
   ];
   return (
@@ -150,7 +250,7 @@ export default function CenterSection() {
                 <EditIcon />
               </Button>
               <Button sx={{ ...buttonStyle }}>
-                <MenuIcon />
+                <MenuIcon color={"#0071CE"} />
               </Button>
             </Box>
           </Box>
@@ -423,6 +523,7 @@ export default function CenterSection() {
                 </Box>
               </Box>
             </Collapse>
+
             <Collapse in={!isExpand}>
               <Box sx={{ display: "grid", gridTemplateColumns: "2fr 1fr" }}>
                 <Box
@@ -1255,6 +1356,61 @@ export default function CenterSection() {
               </Box>
             </Collapse>
           </Box>
+          <Collapse in={isExpand}>
+            <Box
+              sx={{
+                bgcolor: "#fff",
+                borderRadius: "12px",
+                p: "1.125rem 1.5rem",
+                display: "flex",
+                flexDirection: "column",
+                gap: "1.125rem",
+              }}
+            >
+              <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                <Tabs
+                  value={headTab}
+                  onChange={handleHeadTabChange}
+                  variant="scrollable"
+                  scrollButtons="false"
+                  sx={{
+                    minHeight: "40px",
+                    "& .MuiTab-root": {
+                      // minHeight: '40px',
+                      textTransform: "none",
+                      fontSize: "1.5rem",
+                      color: "#111827",
+                      fontWeight: 700,
+                      "&:hover": {
+                        color: "#0071CE",
+                      },
+                      "& .Mui-selected": {
+                        color: "#0071CE !important",
+                      },
+                      "& .MuiTabs-indicator": {
+                        backgroundColor: "#0071CE",
+                        height: "3px",
+                      },
+                    },
+                  }}
+                >
+                  {HeadTab.map((label) => (
+                    <Tab key={label} label={label} />
+                  ))}
+                </Tabs>
+                <Box sx={{ display: "flex", gap: "1rem" }}>
+                  <Button sx={{ ...buttonStyle }}>Variant History</Button>
+                  <Button sx={{ ...buttonStyle }}>+ Create Job</Button>
+                  <Button
+                    sx={{ ...buttonStyle, bgcolor: "#0071CE", color: "#fff" }}
+                  >
+                    + Add Items
+                  </Button>
+                </Box>
+              </Box>
+              <Box>{headTabContents[headTab]}</Box>
+            </Box>
+          </Collapse>
         </Box>
         <Box
           sx={{
@@ -1294,9 +1450,7 @@ export default function CenterSection() {
               <Tab key={label} label={label} />
             ))}
           </Tabs>
-          <Box
-            sx={{ display: "flex", flexDirection: "column", p: "1.5rem" }}
-          >
+          <Box sx={{ display: "flex", flexDirection: "column", p: "1.5rem" }}>
             {tabContents[selectedTab]}
           </Box>
         </Box>

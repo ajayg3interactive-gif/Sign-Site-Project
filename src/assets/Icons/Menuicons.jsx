@@ -276,7 +276,7 @@ export const EditIcon = () => (
   </svg>
 );
 
-export const MenuIcon = () => (
+export const MenuIcon = ({ color }) => (
   <svg
     width="24"
     height="24"
@@ -284,9 +284,9 @@ export const MenuIcon = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <circle cx="4.5" cy="11.5" r="2.5" fill="#0071CE" />
-    <circle cx="12.5" cy="11.5" r="2.5" fill="#0071CE" />
-    <circle cx="20.5" cy="11.5" r="2.5" fill="#0071CE" />
+    <circle cx="4.5" cy="11.5" r="2.5" fill={color} />
+    <circle cx="12.5" cy="11.5" r="2.5" fill={color} />
+    <circle cx="20.5" cy="11.5" r="2.5" fill={color} />
   </svg>
 );
 
@@ -372,6 +372,24 @@ export const PenIcon = () => (
       stroke="#0071CE"
       stroke-width="1.2"
       stroke-miterlimit="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const SmallDownArrow = () => (
+  <svg
+    width="12"
+    height="7"
+    viewBox="0 0 12 7"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0.749999 0.75L5.75 5.75L10.75 0.75"
+      stroke="#0071CE"
+      stroke-width="1.5"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
