@@ -1,6 +1,12 @@
-import { Box, TextField } from "@mui/material";
+import { Box, InputAdornment, TextField } from "@mui/material";
 import React from "react";
-import { BellIcon, LigthIcon, OptionIcon, SearchIcon } from "../assets/Icons/Menuicons";
+import {
+  BellIcon,
+  LigthIcon,
+  OptionIcon,
+  SearchIcon,
+} from "../assets/Icons/Menuicons";
+import dp from "../assets/man-438081_960_720.png"
 
 export default function SearchBar() {
   return (
@@ -18,19 +24,23 @@ export default function SearchBar() {
           sx={{ display: "flex", alignItems: "center", position: "relative" }}
         >
           <Box sx={{ position: "absolute", left: "8px", top: "12px" }}>
-            <SearchIcon />
+            {/* <SearchIcon /> */}
           </Box>
           <TextField
             sx={{
               width: "24.25rem",
-              width: "24.25rem",
               "& .MuiInputBase-root": {
                 height: "2.5rem",
-                paddingRight: "0.5rem",
-                paddingLeft: "2.2rem", // for search icon spacing
+                bgcolor: "#F5F6FA",
               },
-              "& .MuiInputBase-input": {
-                padding: "0.6rem 0", // aligns text vertically
+            }}
+            slotProps={{
+              input: {
+                startAdornment: (
+                  <InputAdornment position="start">
+                   <SearchIcon/>
+                  </InputAdornment>
+                ),
               },
             }}
             //   id=""
@@ -84,6 +94,7 @@ export default function SearchBar() {
             height: "2.5rem",
             display: "flex",
             alignItems: "center",
+            backgroundImage:`url(${dp})`
           }}
         ></Box>
       </Box>

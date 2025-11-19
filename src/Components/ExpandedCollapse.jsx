@@ -1,0 +1,822 @@
+import React from "react";
+import { CalenderIcon, PenIcon } from "../assets/Icons/Menuicons";
+import { Box, Collapse, Typography } from "@mui/material";
+
+export default function ExpandedCollapse({ isExpand }) {
+  const mainHead = {
+    fontWeight: 700,
+    fontSize: "1.125rem",
+    fontFamily: "Nunito",
+    color: "#111827",
+  };
+
+  const subHead = {
+    color: "#111827",
+    fontWeight: 700,
+    fontSize: "1rem",
+    fontFamily: "Nunito",
+  };
+
+  const content = {
+    color: "#111827B2",
+    fontSize: "0.875rem",
+    fontFamily: "Nunito",
+    fontWeight: 500,
+  };
+
+  return (
+    <Collapse in={!isExpand}>
+      <Box sx={{ display: "grid", gridTemplateColumns: "2fr 1fr" }}>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "2.5rem",
+          }}
+        >
+          <Box>
+            <Box sx={{ ...mainHead, mb: "1rem" }}>Customer</Box>
+            <Box sx={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Primary Contact <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>Eric Hoffman Jerome</Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Invoice Contact
+                  <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>David James</Typography>
+              </Box>
+            </Box>
+          </Box>
+          <Box>
+            <Box sx={{ ...mainHead, mb: "1rem" }}>Status</Box>
+            <Box
+              sx={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: "1.719rem",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Status
+                  <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>Approved</Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>Ordered / Invoiced</Typography>
+                <Typography sx={{ ...subHead }}>No/No</Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Job Status
+                  <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>In Process</Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Assigned Department
+                  <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>Production</Typography>
+              </Box>
+            </Box>
+          </Box>
+          <Box>
+            <Box sx={{ ...mainHead, mb: "1rem" }}>Team Assignments</Box>
+            <Box
+              sx={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: "1.719rem",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Sales Rep
+                  <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>Dianne Reachel</Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Production Manager
+                  <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>Dianne Rachel</Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Designer
+                  <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>Dianne Rachel</Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Project Manager
+                  <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>Dianne Rachel</Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Proof Reviewer
+                  <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>Abby</Typography>
+              </Box>
+            </Box>
+          </Box>
+          <Box>
+            <Box sx={{ ...mainHead, mb: "1rem" }}>Addresses & Shipping</Box>
+            <Box
+              sx={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: "1.719rem",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Billing Address
+                  <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>
+                  61 Samarinda, Queens Street,
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Shipping Address
+                  <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>
+                  61 Samarinda, Queens Street,
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Billing Attention To
+                  <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>
+                  A1 Simada, Effil Tower,
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Shipping Attention To
+                  <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>
+                  A1 Simada, Effil Tower,
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Install Address
+                  <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>
+                  61 Samarinda, Queens Street,
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Shipping Method
+                  <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>
+                  Lorem ipsum dolor sit amet
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Install Attention To
+                  <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>
+                  A1 Simada, Effil Tower,
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Shipping Tracking
+                  <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>
+                  Lorem ipsum dolor sit amet
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
+          <Box>
+            <Box sx={{ ...mainHead, mb: "1rem" }}>Payment & Tax</Box>
+            <Box
+              sx={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: "1.719rem",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Terms
+                  <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>
+                  Lorem ipsum dolor sit amet
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Downpayment Percentage
+                </Typography>
+                <Typography sx={{ ...subHead }}>50%($2,145.65)</Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  External Payment
+                  <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>
+                  Lorem ipsum dolor sit amet
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.375rem",
+                }}
+              >
+                <Typography sx={{ ...content }}>
+                  Tax
+                  <PenIcon />
+                </Typography>
+                <Typography sx={{ ...subHead }}>Default Tax (8.5%)</Typography>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            position: "relative",
+          }}
+        >
+          <Box
+            sx={{
+              ...mainHead,
+              mb: "1.5rem",
+              bgcolor: "#F5F6FA",
+              height: "9.5rem",
+              borderRadius: "12px",
+              p: "1rem",
+            }}
+          >
+            Dates
+          </Box>
+          <Box
+            sx={{
+              position: "absolute",
+              bgcolor: "#fff",
+              top: "3.5rem",
+              p: "1rem",
+              borderRadius: "12px",
+              border: "1px solid #D9D9D9",
+              width: "100%",
+            }}
+          >
+            <Box sx={{ display: "flex", position: "relative" }}>
+              <Box
+                sx={{
+                  borderRight: "2px dashed #D9D9D9",
+                  position: "absolute",
+                  height: "470px",
+                  left: "18px",
+                  top: "30px",
+                }}
+              ></Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "1.875rem",
+                }}
+              >
+                <Box sx={{ display: "flex", gap: "1rem" }}>
+                  <Box
+                    sx={{
+                      bgcolor: "#0071CE1A",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      height: "2.5rem",
+                      width: "2.5rem",
+                      borderRadius: "20px",
+                    }}
+                  >
+                    <CalenderIcon />
+                  </Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "0.375rem",
+                    }}
+                  >
+                    <Typography sx={{ ...content }}>Quote Date</Typography>
+                    <Typography sx={{ ...subHead }}>
+                      Saturday, 15-02-2025
+                    </Typography>
+                  </Box>
+                </Box>
+                <Box sx={{ display: "flex", gap: "1rem" }}>
+                  <Box
+                    sx={{
+                      bgcolor: "#0071CE1A",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      height: "2.5rem",
+                      width: "2.5rem",
+                      borderRadius: "20px",
+                    }}
+                  >
+                    <CalenderIcon />
+                  </Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "0.375rem",
+                    }}
+                  >
+                    <Typography sx={{ ...content }}>Due Date</Typography>
+                    <Typography sx={{ ...subHead }}>
+                      Monday, 24-02-2025
+                    </Typography>
+                  </Box>
+                </Box>
+                <Box sx={{ display: "flex", gap: "1rem" }}>
+                  <Box
+                    sx={{
+                      bgcolor: "#0071CE1A",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      height: "2.5rem",
+                      width: "2.5rem",
+                      borderRadius: "20px",
+                    }}
+                  >
+                    <CalenderIcon />
+                  </Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "0.375rem",
+                    }}
+                  >
+                    <Typography sx={{ ...content }}>Art Due Date</Typography>
+                    <Typography sx={{ ...subHead }}>
+                      Tuesday, 25-02-2025
+                    </Typography>
+                  </Box>
+                </Box>
+                <Box sx={{ display: "flex", gap: "1rem" }}>
+                  <Box
+                    sx={{
+                      bgcolor: "#0071CE1A",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      height: "2.5rem",
+                      width: "2.5rem",
+                      borderRadius: "20px",
+                    }}
+                  >
+                    <CalenderIcon />
+                  </Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "0.375rem",
+                    }}
+                  >
+                    <Typography sx={{ ...content }}>
+                      Production Due Date
+                    </Typography>
+                    <Typography sx={{ ...subHead }}>
+                      Wednesday, 26-02-2025
+                    </Typography>
+                  </Box>
+                </Box>
+                <Box sx={{ display: "flex", gap: "1rem" }}>
+                  <Box
+                    sx={{
+                      bgcolor: "#0071CE1A",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      height: "2.5rem",
+                      width: "2.5rem",
+                      borderRadius: "20px",
+                    }}
+                  >
+                    <CalenderIcon />
+                  </Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "0.375rem",
+                    }}
+                  >
+                    <Typography sx={{ ...content }}>
+                      Next Contact Date
+                    </Typography>
+                    <Typography sx={{ ...subHead }}>
+                      Tuesday, 25-02-2025
+                    </Typography>
+                  </Box>
+                </Box>
+                <Box sx={{ display: "flex", gap: "1rem" }}>
+                  <Box
+                    sx={{
+                      bgcolor: "#0071CE1A",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      height: "2.5rem",
+                      width: "2.5rem",
+                      borderRadius: "20px",
+                    }}
+                  >
+                    <CalenderIcon />
+                  </Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "0.375rem",
+                    }}
+                  >
+                    <Typography sx={{ ...content }}>Shipping Date</Typography>
+                    <Typography sx={{ ...subHead }}>
+                      Wednesday, 26-02-2025
+                    </Typography>
+                  </Box>
+                </Box>
+                <Box sx={{ display: "flex", gap: "1rem" }}>
+                  <Box
+                    sx={{
+                      bgcolor: "#0071CE1A",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      height: "2.5rem",
+                      width: "2.5rem",
+                      borderRadius: "20px",
+                    }}
+                  >
+                    <CalenderIcon />
+                  </Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "0.375rem",
+                    }}
+                  >
+                    <Typography sx={{ ...content }}>Install Date</Typography>
+                    <Typography sx={{ ...subHead }}>
+                      Monday, 24-02-2025
+                    </Typography>
+                  </Box>
+                </Box>
+                <Box sx={{ display: "flex", gap: "1rem" }}>
+                  <Box
+                    sx={{
+                      bgcolor: "#0071CE1A",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      height: "2.5rem",
+                      width: "2.5rem",
+                      borderRadius: "20px",
+                    }}
+                  >
+                    <CalenderIcon />
+                  </Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "0.375rem",
+                    }}
+                  >
+                    <Typography sx={{ ...content }}>In Hand Date</Typography>
+                    <Typography sx={{ ...subHead }}>
+                      Monday, 24-02-2025
+                    </Typography>
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+      <Box sx={{ display: "flex", flexDirection: "column", gap: "2.5rem" }}>
+        <Box sx={{ mt: "2.5rem" }}>
+          <Box sx={{ ...mainHead, mb: "1rem" }}>Details</Box>
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              gap: "1.719rem",
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.375rem",
+              }}
+            >
+              <Typography sx={{ ...content }}>
+                Design Details
+                <PenIcon />
+              </Typography>
+              <Typography sx={{ ...subHead }}>
+                Lorem ipsum dolor sit amet
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.375rem",
+              }}
+            >
+              <Typography sx={{ ...content }}>Production Details</Typography>
+              <Typography sx={{ ...subHead }}>
+                Lorem ipsum dolor sit amet.
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.375rem",
+              }}
+            >
+              <Typography sx={{ ...content }}>
+                Shipping Details
+                <PenIcon />
+              </Typography>
+              <Typography sx={{ ...subHead }}>
+                Lorem ipsum dolor sit amet
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.375rem",
+              }}
+            >
+              <Typography sx={{ ...content }}>
+                Installation Details
+                <PenIcon />
+              </Typography>
+              <Typography sx={{ ...subHead }}>
+                Lorem ipsum dolor sit amet.
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.375rem",
+              }}
+            >
+              <Typography sx={{ ...content }}>
+                Special Info
+                <PenIcon />
+              </Typography>
+              <Typography sx={{ ...subHead }}>
+                Lorem ipsum dolor sit amet.
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.375rem",
+              }}
+            >
+              <Typography sx={{ ...content }}>
+                Customer Note
+                <PenIcon />
+              </Typography>
+              <Typography sx={{ ...subHead }}>
+                Lorem ipsum dolor sit amet.
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
+        <Box sx={{}}>
+          <Box sx={{ ...mainHead, mb: "1rem" }}>Other</Box>
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              gap: "1.719rem",
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.375rem",
+              }}
+            >
+              <Typography sx={{ ...content }}>
+                Sales Order Title
+                <PenIcon />
+              </Typography>
+              <Typography sx={{ ...subHead }}>Lorem ipsum</Typography>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.375rem",
+              }}
+            >
+              <Typography sx={{ ...content }}>Customer PO</Typography>
+              <Typography sx={{ ...subHead }}>Lorem ipsum</Typography>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.375rem",
+              }}
+            >
+              <Typography sx={{ ...content }}>
+                Customer PO Date
+                <PenIcon />
+              </Typography>
+              <Typography sx={{ ...subHead }}>25 March, 2025</Typography>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+    </Collapse>
+  );
+}
